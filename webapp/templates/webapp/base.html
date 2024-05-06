@@ -1,0 +1,207 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Casa </title>
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/yeti/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css'  %}">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+   
+    {% include 'webapp/navbar.html' %}
+    <img src="static/images/logo.jpg" alt="CasaConnect" width="200" height="200">
+
+
+
+<div class="container">
+
+    <br>
+
+{% for message in messages %}
+
+  {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+
+    <p class = "alert alert-success float-center text-center">
+
+  {{message}}
+    </p>
+
+  {% endif %}
+
+
+
+{% endfor %}
+
+{% block content %}
+
+
+
+
+
+
+{% endblock %}
+
+
+
+</div>
+
+
+
+  <main role="main">
+
+    <section class="div-2" class="jumbotron text-center">
+      <div  class="container">
+        <h1 class="jumbotron-heading">Our Services</h1>
+        <p class="lead text-muted">
+           
+CasaCareConnect.com will offer a comprehensive solution where service providers will undergo a thorough background check for security, 
+trust, and quality assurance. They can list their services, availability, and rates, while clients can easily search, book, and pay for 
+services required. The platform will automate job arrangements, payments, and reviews, thus simplifying the transaction process for both parties.
+
+
+
+        </p>
+        <p>
+          <a href="#" class="btn btn-primary my-2">Main call to action</a>
+          <a href="#" class="btn btn-secondary my-2">Schedule an appoinment</a>
+        </p>
+      </div>
+    </section>
+
+    <div class="album py-5 bg-light">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <a href="/create-record">
+              <img class="card-img-top" src="https://plus.unsplash.com/premium_photo-1663013675008-bd5a7898ac4f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Card image cap"  >
+              </a>
+              <h4 style="text-align: center;">$50/hr</h4>
+              <h4 style="text-align: center;">Plumbing</h4>
+
+
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <a href="/create-record">
+              <img class="card-img-top" src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Card image cap">
+            </a>
+              <h4 style="text-align: center;">$20/hr</h4>
+              <h4 style="text-align: center;">Cleaning</h4>
+
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <a href="/create-record">
+              <img class="card-img-top" src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Card image cap">
+              </a>
+              <h4 style="text-align: center;">$20/hr</h4>
+              <h4 style="text-align: center;">Electrical</h4>
+              
+
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <a href="/create-record">
+              <img class="card-img-top" src="https://media.istockphoto.com/id/1871801744/photo/male-master-fixing-conditioner-and-checking-fan-outdoors.webp?s=2048x2048&w=is&k=20&c=BOw5GoPS6g6UuykflHyH20tda-a6cXBsc9cWFgUXEX4=" alt="Card image cap">
+              </a>
+              <h4 style="text-align: center;">$20/hr</h4>
+              <h4 style="text-align: center;">AC</h4>
+
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <a href="/create-record">
+              <img class="card-img-top" src="https://www.mapcommunications.com/wp-content/uploads/2017/07/MAP-Landscaping-Answering-Service.jpg" alt="Card image cap">
+              </a>
+              <h4 style="text-align: center;">$25/hr</h4>
+              <h4 style="text-align: center;">Land Scaping</h4>
+
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <a href="/create-record">
+              <img class="card-img-top" src="https://plus.unsplash.com/premium_photo-1682126104327-ef7d5f260cf7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Card image cap">
+              </a>
+              <h4 style="text-align: center;">$20/hr</h4>
+              <h4 style="text-align: center;">Pest Control</h4>
+
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <a href="/create-record">
+              <img class="card-img-top" src="https://images.unsplash.com/photo-1635424709961-f3a150459ad4?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Card image cap">
+              </a>
+              <h4 style="text-align: center;">$80/hr</h4>
+              <h4 style="text-align: center;">Roofing</h4>
+
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <a href="/create-record">
+              <img class="card-img-top" src="https://media.istockphoto.com/id/1461683093/photo/man-painting-wall-with-light-blue-dye-indoors-back-view.webp?s=2048x2048&w=is&k=20&c=47uTGjsfdLMuFZENHlVLRNd94yRNQcYtBZeonPOF49w=" alt="Card image cap">
+              </a>
+              <h4 style="text-align: center;">$20/hr</h4>
+              <h4 style="text-align: center;">Painting</h4>
+
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <a href="/create-record">
+              <img class="card-img-top" src="https://media.istockphoto.com/id/639282928/photo/installing-carpeting.webp?s=2048x2048&w=is&k=20&c=eAsiVcyue3bdopR-P-YwCRiPquVvpdn_bue4vZTJCPw=" alt="Card image cap">
+              </a>
+              <h4 style="text-align: center;">$25/hr</h4>
+              <h4 style="text-align: center;">Carpeting</h4>
+
+            </div>
+          </div>
+
+          
+          
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  
+
+{% include 'webapp/footer.html' %}
+
+<script src="{% static 'js/app.js' %}"> </script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+
+
+
+
+
+
+</html>
+

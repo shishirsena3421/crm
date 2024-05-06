@@ -1,0 +1,120 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary justify-content-center">
+
+    <a class="navbar-brand main-heading" href="{% url '' %}"> 
+            
+      &nbsp; CasaConnect
+    
+    </a>
+  
+  
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+  
+    </button>
+  
+  
+      <div class="collapse navbar-collapse text-center" id="navbarNavDropdown">
+  
+        
+        <ul class="navbar-nav mr-auto">
+  
+  
+          &nbsp;     &nbsp;     &nbsp; 
+  
+          {% if user.is_authenticated %}
+  
+            <li class="nav-item">
+        
+              <a class="nav-link" href="{% url 'dashboard' %}">Dashboard &nbsp; <i class="fa fa-home" aria-hidden="true"></i> </a>
+  
+            </li>
+  
+  
+            &nbsp;     &nbsp;     &nbsp; 
+  
+  
+            <li class="nav-item">
+  
+              <a class="nav-link" href="{% url 'user-logout' %}">Sign out &nbsp; <i class="fa fa-sign-out" aria-hidden="true"></i> </a>
+  
+            </li>
+  
+  
+        </ul>
+  
+        {% else %}
+  
+        <li class="nav-item">
+  
+          <a class="nav-link" href="{% url 'register' %}"> Register </a>
+  
+        </li>
+  
+  
+        &nbsp;     &nbsp;     &nbsp; 
+  
+  
+        <li class="nav-item">
+  
+          <a  class="nav-link" href="{% url 'my-login' %}">Login</a>
+  
+        </li>
+  
+  
+        {% endif %}
+      
+      
+
+        <li class="nav-item">
+  
+          <a class="nav-link" href="{% url 'payment' %}">Payments</a>
+  
+        </li>
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Services
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Plumbing</a></li>
+            <li><a class="dropdown-item" href="#">Cleaning</a></li>
+            <li><a class="dropdown-item" href="#">Electrical</a></li>
+            <li><a class="dropdown-item" href="#">AC</a></li>
+            <li><a class="dropdown-item" href="#">Landscaping</a></li>
+            <li><a class="dropdown-item" href="#">Pest Control</a></li>
+            <li><a class="dropdown-item" href="#">Roofing</a></li>
+            <li><a class="dropdown-item" href="#">Painting</a></li>
+            <li><a class="dropdown-item" href="#">Carpeting</a></li>
+            
+            
+         
+            
+          </ul>
+        </li>
+
+
+      </div>
+  
+  
+
+
+
+
+
+
+
+      
+  </nav>
+
+
+

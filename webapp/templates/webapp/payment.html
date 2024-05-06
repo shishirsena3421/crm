@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing Table</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    .pricing-header {
+        text-align: center;
+        padding: 50px 10px;
+        background: #007BFF;
+        color: white;
+    }
+    .pricing-wrapper {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+    .pricing-plan {
+        background: white;
+        border: 1px solid #ddd;
+        padding: 20px;
+        margin: 10px;
+        width: 300px;
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+    }
+    .plan-name {
+        font-size: 24px;
+        color: #333;
+    }
+    .price {
+        font-size: 20px;
+        color: #666;
+    }
+    .features {
+        margin: 20px 0;
+        list-style: none;
+        padding: 0;
+    }
+    .features li {
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+    }
+    .features li:last-child {
+        border-bottom: none;
+    }
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        margin-top: 20px;
+        background-color: #007BFF;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+</style>
+</head>
+<body>
+<div class="pricing-header">
+    <h1>Our Pricing Plans</h1>
+</div>
+
+<div class="pricing-wrapper">
+    <div class="pricing-plan" onmouseover="handleMouseOver(this)" onmouseout="handleMouseOut(this)">
+        <div class="plan-name">Basic</div>
+        <div class="price">$20/hr</div>
+        <ul class="features">
+            <li>1 Service</li>
+            <li>1 Worker</li>
+            <li>Basic Support</li>
+        </ul>
+        <a href="#" class="button">Choose Plan</a>
+    </div>
+
+    <div class="pricing-plan" onmouseover="handleMouseOver(this)" onmouseout="handleMouseOut(this)">
+        <div class="plan-name">Pro</div>
+        <div class="price">$100/hr</div>
+        <ul class="features">
+            <li> 2 Services</li>
+            <li> 4 Workers</li>
+            <li>Priority Support</li>
+        </ul>
+        <a href="#" class="button">Choose Plan</a>
+    </div>
+
+    <div class="pricing-plan" onmouseover="handleMouseOver(this)" onmouseout="handleMouseOut(this)">
+        <div class="plan-name">Enterprise</div>
+        <div class="price">$500/month</div>
+        <ul class="features">
+            <li> 4 Services</li>
+            <li> 6 Workers</li>
+            <li>24/7 Support</li>
+        </ul>
+        <a href="#" class="button">Choose Plan</a>
+    </div>
+</div>
+
+<script>
+function handleMouseOver(element) {
+    element.style.transform = "scale(1.1)";
+}
+
+function handleMouseOut(element) {
+    element.style.transform = "scale(1)";
+}
+</script>
+</body>
+</html>

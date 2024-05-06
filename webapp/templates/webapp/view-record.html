@@ -1,0 +1,38 @@
+{% extends 'webapp/base.html'%}
+
+
+{% block content %}
+
+<div style="box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); border-radius: 8px; margin: 20px; overflow: hidden;">
+    <div style="background-color: #f8f9fa; padding: 30px 20px; text-align: center;">
+        <strong>{{ record.first_name|upper }} {{ record.last_name|upper }}</strong>
+    </div>
+    <hr style="margin: 0; border: none; height: 2px; background-color: black;">
+    <div style="padding: 20px; background-color: #ffffff; line-height: 3.6;">
+        <h3><strong>User ID:</strong> {{ record.user }}</h3>
+        <h3><strong>ID:</strong> {{ record.id }}</h3>
+        <h3><strong>Email:</strong> {{ record.email }}</h3>
+        <h3><strong>Phone number:</strong> {{ record.phone }}</h3>
+        <h3><strong>Address:</strong> {{ record.address }}</h3>
+        <h3><strong>City:</strong> {{ record.city }}</h3>
+        <h3><strong>Postal:</strong> {{ record.postal }}</h3>
+        <h3><strong>Service:</strong> {{ record.service }}</h3>
+        <h3><strong>Booked Date:</strong> {{ record.creation_date }}</h3>
+        <h3><strong>Service Date:</strong> {{ record.service_date}}</h3>
+        <h3><strong>Commentary:</strong> {{ record.Commentary }}</h3>
+    </div>
+    <div style="background-color: #f8f9fa; padding: 30px 20px; text-align: center;">
+        <a href="{% url 'dashboard' %}" style="text-decoration: none; padding: 8px 36px; border-radius: 4px; color: white; background-color: #28a745; margin: 5px; display: inline-block;">Return &nbsp; <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        </a>
+        <a href="{% url 'update-record' record.id %}" style="text-decoration: none; padding: 8px 36px; border-radius: 4px; color: white; background-color: #ffc307; margin: 5px; display: inline-block;">Update Record &nbsp; 
+
+            <i class="fa fa-plus-square" aria-hidden="true"></i>
+                    </a>
+        <a href="{% url 'delete-record' record.id %}" style="text-decoration: none; padding: 8px 36px; border-radius: 4px; color: white; background-color: #dc3545; margin: 5px; display: inline-block;">Delete &nbsp; <i class="fa fa-minus-square" aria-hidden="true"></i>
+
+        </a>
+    </div>
+</div>
+
+
+{% endblock %}
